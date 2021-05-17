@@ -8,9 +8,9 @@ export default function Basket(props) {
             {prods.map((prod) => {
                 if(prod.value > 0) {
                     return (
-                        <div className="border">
+                        <div className="border d-flex align-items-start">
                             <img src={prod.image} alt={prod.desc} width='150' />
-                            <p className="qty d-inline mx-5">Quantity: {prod.value}</p>
+                            <p className="qty d-inline mx-5 justify-content-center">Quantity: {prod.value}</p>
                             <p className="px-4">{prod.desc}</p>
                         </div>
                     )

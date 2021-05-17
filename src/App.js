@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { products } from "./Products"
-import DisplayProducts from "./displayProducts"
+// import DisplayProducts from "./displayProducts"
 
 class App extends Component {
   constructor(props) {
