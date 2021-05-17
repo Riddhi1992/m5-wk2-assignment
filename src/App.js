@@ -12,32 +12,36 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Products: products      
+      products: products      
     }
   }
-  
-  handleIncrement = (addvalue) => {
+
+  onIncrement = (addvalue) => {
     if(addvalue.value < 10) {
       const updatedValue = addvalue.value++;
       this.setState({updatedValue});
     }
   }
-  handledecrement = (decvalue) => {
+  onDecrement = (decvalue) => {
     if(decvalue.value > 0) {
       const updatedValue = decvalue.value--;
       this.setState({updatedValue});
     }
   }
 
-
+  // const [cartItems, setCartItems] = useState([]);
 
   render() {
     return (
       {}, 
       (
         <div className="App">
-          <Nav />
-          <DisplayProducts Products={this.state.Products} />
+          <Nav totalValue={this.state.products
+            .map((prod) => prod.value)
+            .reduce((acc, curr, index) => acc + curr, 0)}
+            prods={this.state.products} />
+          <DisplayProducts products={this.state.products} onIncrement={this.onIncrement}
+            onDecrement={this.onDecrement} />
         </div>
       )
     )
