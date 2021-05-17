@@ -25,7 +25,8 @@ function Nav(props) {
 
             <Switch>
                 <Route exact path="/">
-                    <DisplayProducts />
+                    <DisplayProducts products={props.products} onIncrement={props.onIncrement}
+                     onDecrement={props.onDecrement}/>
                 </Route>
                 <Route path="/shopCart">
                     <Basket />

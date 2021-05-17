@@ -3,6 +3,7 @@ import {faPlusCircle, faMinusCircle} from "@fortawesome/free-solid-svg-icons";
 // import {useLocation} from 'react-router-dom';
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+// import { products } from "./Products";
 
 // function DisplayProducts(props) {
 //     return (
@@ -28,6 +29,7 @@ import { Button, Modal } from "react-bootstrap";
 //   }
 
 function DisplayProducts(props) {
+    const {products = []} = props
     const [show, setShow] = useState(false);
     const [showImge, setShowImge] = useState({});
     const handleClose = () => setShow(false);
@@ -38,7 +40,7 @@ function DisplayProducts(props) {
 
     return (
         <div>
-            {props.products.map(product => {
+            {products.map(product => {
                 return (
                     <div className="card" key={product.id}>
                         <h4 className="text-start mt-4 ms-5 me-4 mb-2">{product.desc}</h4>

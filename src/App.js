@@ -39,9 +39,10 @@ class App extends Component {
           <Nav totalValue={this.state.products
             .map((prod) => prod.value)
             .reduce((acc, curr, index) => acc + curr, 0)}
-            prods={this.state.products} />
-          <DisplayProducts products={this.state.products} onIncrement={this.onIncrement}
-            onDecrement={this.onDecrement} />
+            prods={this.state.products} onIncrement={this.onIncrement}
+            onDecrement={this.onDecrement}/>
+          {/* <DisplayProducts products={this.state.products} onIncrement={this.onIncrement}
+            onDecrement={this.onDecrement} /> */}
         </div>
       )
     )

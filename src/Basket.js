@@ -1,10 +1,11 @@
 import React from "react";
 
 export default function Basket(props) {
+    const {prods = []} = props
     return (
         <div className="block">
             <h2>Cart Items</h2>
-            {props.prods.map((prod) => {
+            {prods.map((prod) => {
                 if(prod.value > 0) {
                     return (
                         <div className="border">
