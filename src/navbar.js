@@ -2,13 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import DisplayProducts from "./displayProducts";
 import Basket from "./Basket";
+import SignIn from "./SignIn";
 import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 
 function Nav(props) {
-    const myStyle = {
-        color: "#61dafb"
-    }
     return (
         <Router>
             <div>
@@ -27,10 +25,16 @@ function Nav(props) {
 
             <Switch>
                 <Route exact path="/">
-                    <DisplayProducts products={props.prods} onIncrement={props.onIncrement} onDecrement={props.onDecrement}/> 
+                    <DisplayProducts 
+                        products={props.prods} 
+                        onIncrement={props.onIncrement} 
+                        onDecrement={props.onDecrement}/> 
                 </Route>
                 <Route path="/shopCart">
-                    <Basket prods={props.prods}/>
+                    <Basket prods={props.prods} totalValue={props.totalValue} />
+                </Route>
+                <Route path="/signin">
+                    <SignIn prods={props.prods} />
                 </Route>
             </Switch>
         </Router>

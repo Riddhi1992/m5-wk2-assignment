@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import {Button} from "react-bootstrap";
 
 export default function Basket(props) {
     const {prods = []} = props
@@ -16,6 +18,23 @@ export default function Basket(props) {
                     )
                 }
             })}
+            <CheckOutBtn totalValue={props.totalValue} />
         </div>
     );
+}
+
+const CheckOutBtn = ({totalValue}) => {
+    return (
+        totalValue > 0 ?
+        <Link to="/signin">
+            <Button className="mt-4">Check Out</Button>
+        </Link>
+        :
+        <React.Fragment>
+            <h4>There are {totalValue} items in your cart.</h4>
+            <Link to="/">
+                <Button className="mt-4 bg-success">Continue Shop</Button>
+            </Link>
+        </React.Fragment>
+    )
 }
