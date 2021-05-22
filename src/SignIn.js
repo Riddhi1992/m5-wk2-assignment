@@ -20,7 +20,7 @@ export default function SignIn(props) {
         <div className="container">
             <Card>
                 {!login && <>
-                    <Card.Header className="">Sign In</Card.Header>
+                    <Card.Header className="h1">Sign In</Card.Header>
                     <Card.Body>
                         <Card.Text>
                             <h3>Please login using one of the following:</h3>
@@ -60,7 +60,7 @@ function Home ({fbpic, fbdata}) {
     return(
         <React.Fragment>
             <Card>
-                <Card.Header>Check Out</Card.Header>
+                <Card.Header className="h1">Check Out</Card.Header>
                 <Card.Body>
                     <img src={fbpic} alt={fbdata.name} />
                     <h3 className="d-inline text-success mx-2">
