@@ -17,7 +17,7 @@ function Nav(props) {
                     <Link to="/shopCart">
                         <div className="text-white">
                             <FontAwesomeIcon icon={faShoppingCart}/>
-                            <span className="ps-2"> {props.totalValue} items</span>
+                            <span className="ps-2">  {props.totalValue} items</span>
                         </div>
                     </Link>
                 </header>

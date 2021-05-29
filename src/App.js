@@ -13,7 +13,7 @@ class App extends Component {
       listNum: ""      
     }
   }
-
+  
   onSort = (listNum, sortType) => {
     switch (sortType) {
       case "def":

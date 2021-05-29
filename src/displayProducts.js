@@ -1,9 +1,7 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPlusCircle, faMinusCircle} from "@fortawesome/free-solid-svg-icons";
-// import {useLocation} from 'react-router-dom';
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
-// import { products } from "./Products";
 
 function DisplayProducts(props) {
     const {products = []} = props
