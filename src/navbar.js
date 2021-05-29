@@ -12,7 +12,7 @@ function Nav(props) {
             <div>
                 <header className="App-header ps-5 pe-5">
                     <Link to="/">
-                        <h2 className="text-white">Shop 2 <span className="ps-2 pe-2 pb-1 bg-light text-dark rounded-circle rColor" id="" style={{color: "#61dafb"}}>R</span>eact</h2>
+                        <h2 className="text-white">Shop 2 <span className="ps-2 pe-2 pb-1 bg-light text-dark rounded-circle rColor" style={{color: "#61dafb"}}>R</span>eact</h2>
                     </Link>
                     <Link to="/shopCart">
                         <div className="text-white">
@@ -28,7 +28,10 @@ function Nav(props) {
                     <DisplayProducts 
                         products={props.prods} 
                         onIncrement={props.onIncrement} 
-                        onDecrement={props.onDecrement}/> 
+                        onDecrement={props.onDecrement} 
+                        sortType={props.sortType} 
+                        listNum={props.listNum}
+                        onSort={props.onSort} /> 
                 </Route>
                 <Route path="/shopCart">
                     <Basket prods={props.prods} totalValue={props.totalValue} />
